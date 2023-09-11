@@ -1,0 +1,127 @@
+<br>
+<!-- <div><button><a href="create.html"></a>Them</button></div> -->
+<div class="container">
+    <form method="post">
+        <div class="form-group">
+            <label>Ảnh sản phẩm: <span class="do">*</span></label>
+            <input type="file" class="form-control-file" id="fileUpload" ng-model="anh" required /> <br>
+            <!-- <label>ID</label>  -->
+            <input class="form-control" type="hidden" id="id" placeholder="id" ng-model="id" />
+            <label>Tên sản phẩm:<span class="do">*</span></label>
+            <input class="form-control" id="ten" ng-model="ten" required/>
+            <label>Đặc điểm:<span class="do">*</span></label>
+            <input class="form-control" id="dacdiem" ng-model="dacdiem" />
+        </div>
+        <div class="form-group">
+            <label>Loại:<span class="do">*</span></label><br>
+            <select class="loai" ng-model="loai" required>
+                <option value="Shirts">Shirts</option>
+                <option value="Hoodie">Hoodie</option>
+                <option value="Shorts">Shorts</option>
+                <option value="Sport shoes">Sport shoes</option>
+                <option value="T-Shirts">T-Shirts</option>
+                <option value="Pants">Pants</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Giá bán:<span class="do">*</span></label>
+            <input type="text" class="form-control" id="gia" ng-model="gia" required />
+        </div>
+        <div class="form-group">
+            <label>Số lượng:<span class="do">*</span></label>
+            <input type="text" class="form-control" id="soluongton" ng-model="soluongton" required/>
+        </div>
+        <div class="form-group" ng-model="kichco">
+            <span>
+                Kích cỡ:<span class="do">*</span>
+                <div class="form-check" ng-repeat="size in listSize">
+                    <input class="form-check-input" type="checkbox" id="{{size.ten}}" name="checkk" value="{{size.ten}}" >
+                    <label> {{size.ten}}</label>
+                </div>
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Mô tả:<span class="do">*</span></label>
+            <input type="text" class="form-control" id="mota" ng-model="mota" required />
+        </div>
+        <div class="form-group">
+            <label>Chất liệu:<span class="do">*</span></label>
+            <input type="text" class="form-control" id="chatlieu" ng-model="chatlieu" required/>
+        </div>
+        <div class="form-group">
+            <label>Thiết kế:<span class="do">*</span></label>
+            <input type="text" class="form-control" id="thietke" ng-model="thietke" required/>
+        </div>
+        <div class="form-group">
+            <label>Ưu điểm:<span class="do">*</span></label>
+            <input type="text" class="form-control" id="uudiem" ng-model="uudiem" required/>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" ng-click="them()">
+            Add
+        </button>
+        <button type="submit" class="btn btn-success" ng-click="sua(sp.id)">
+            Update
+        </button>
+    </form>
+</div>
+<br>
+<table class="table table-hover">
+    <tr>
+        <td><b>STT</b> </td>
+        <!-- <td>ID</td> -->
+        <td><b>Ảnh</b> </td>
+        <td><b>Tên sản phẩm</b> </td>
+        <td><b>Giá bán</b> </td>
+        <td><b>Số lượng</b> </td>
+        <td><b>Acction</b> </td>
+    </tr>
+    <tr ng-repeat="sp in listSP">
+        <td>{{$index}}</td>
+        <!-- <td>{{sp.id}}</td> -->
+        <td><img style="width: 70px;" height="70px" src="{{sp.anh}}"></td>
+        <td>{{sp.ten}}</td>
+        <td>{{sp.gia}}</td>
+        <td>{{sp.soluongton}}</td>
+        <td>
+            <button ng-click="fill(sp.id)" class="btn btn-warning"><i class="fa-solid fa-pen"></i> Fill</button>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+                ng-click="getSPbyid(sp.id)"><i class="fa-solid fa-circle-info"></i> Xem chi tiết</button>
+          
+            <button ng-click="xoa(sp.id)" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</button>
+        </td>
+    </tr>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Chi tiết sản phẩm!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <b>ID: </b>{{sanpham.id}} <br>
+                    <b>Ảnh: </b><img style="width: 60px;" height="60px" src="{{sanpham.anh}}"><br>
+                    <b>Tên sản phẩm: </b>{{sanpham.ten}} <br>
+                    <b>Đặc điểm: </b>{{sanpham.dacdiem}} <br>
+                    <b>Phân loại: </b>{{sanpham.loai}} <br>
+                    <b>Giá bán: </b>${{sanpham.gia}} <br>
+                    <!-- <b>Tình trạng: </b><span class="nhan" ng-if="{{sanpham.soluongton}} > 0">Còn hàng</span> <span class="nhan1" ng-if="{{sanpham.soluongton}} < 1">Hết hàng</span><br> -->
+                    <b>Kích cỡ: </b><button class="kichthuoc1" ng-repeat="size in listSize">{{size.ten}}</button><br>
+                    <b>Mô tả: </b>{{sanpham.mota}} <br>
+                    <b>Chất liệu: </b>{{sanpham.chatlieu}} <br>
+                    <b>Thiết kế: </b>{{sanpham.thietke}} <br>
+                    <b>Ưu điểm: </b>{{sanpham.uudiem}} <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</table>

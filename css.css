@@ -1,0 +1,316 @@
+.sp {
+  text-align: center;
+}
+.logo {
+  margin-top: 7px;
+  text-align: center;
+  padding-bottom: 7px;
+}
+.anh1 img{
+  width: 350px;
+  height: 250px;
+}
+.button-cangiua {
+  margin-left: 770px;
+}
+
+.nut a {
+  background-color: #d7d5d5;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: all 0.5s ease;
+}
+.nut a:hover {
+  background-color: grey;
+}
+.nut {
+  background-color: white;
+  border: 0.5px solid rgb(248, 248, 250);
+}
+.use {
+  margin-left: 700px;
+  border: none;
+  margin-right: 5px;
+}
+.search {
+  margin-left: 5px;
+  border: none;
+}
+.giohang {
+  margin-left: 5px;
+  border: none;
+}
+/* .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+   */
+.box {
+  width: 270px;
+  margin: 0 10px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}
+.box img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+.box:hover {
+  transform: scale(1.3);
+  z-index: 2;
+}
+.card-img img {
+  transition: all 1.3s ease;
+}
+.card-img:hover img {
+  transform: scale(1.2);
+}
+.u {
+  text-align: center;
+}
+.o {
+  margin-top: 15px;
+  padding-left: 10px;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.a {
+  padding-left: 10px;
+  margin-right: 10px;
+  color: gray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.q {
+  padding-left: 10px;
+  margin-right: 10px;
+  color: black;
+}
+.ribbon-wrap {
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  position: absolute;
+  top: -2%;
+  text-align: center;
+}
+.ribbon-wrap::before,
+.ribbon-wrap::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  z-index: -1;
+}
+.ribbon {
+  width: 220px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 0;
+  background: rgb(186, 18, 18);
+  color: white;
+  position: absolute;
+  transform: rotate(-45deg);
+  right: -17%;
+  top: 20%;
+}
+.ribbon-wrap1 {
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  position: absolute;
+  top: -2%;
+  /* left: -2%; */
+  text-align: center;
+}
+.ribbon-wrap1::before,
+.ribbon-wrap::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  z-index: -1;
+}
+.ribbon1 {
+  width: 220px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 0;
+  background: rgb(40, 40, 121);
+  color: white;
+  position: absolute;
+  transform: rotate(-45deg);
+  right: -17%;
+  top: 20%;
+}
+.nn {
+  padding-left: 500px;
+}
+.mm {
+  padding-right: 550px;
+}
+.gg {
+  color: grey;
+}
+.f {
+  display: flex;
+}
+.gach {
+  text-decoration: line-through;
+  color: gray;
+}
+.k {
+  margin-left: 10px;
+  display: flex;
+}
+.cach {
+  color: rgb(4, 170, 4);
+  padding-left: 10px;
+}
+.login {
+  text-align: center;
+}
+.detail-img {
+  width: 379px;
+  height: 530px;
+  border: none;
+}
+.detail-img1 {
+  width: 380px;
+  height: 530px;
+  border: none;
+}
+.tieude {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.nhan {
+  color: rgb(16, 175, 16);
+}
+.nhan1{
+  color: rgb(206, 43, 43);
+}
+.kichthuoc {
+  font-size: 15px;
+  background-color: rgb(153, 205, 235);
+  border: 1px solid rgb(145, 203, 237);
+  margin-left: 5px;
+}
+.kichthuoc1 {
+  font-size: 15px;
+  
+  border: 1px solid #fff;
+  margin-left: 5px;
+}
+.themvaogio {
+  padding-left: 70px;
+}
+.category {
+  margin-left: 50px;
+}
+.category-text {
+  width: 90px;
+}
+.text {
+  text-align: center;
+}
+.giohang {
+  text-align: center;
+}
+.anhsp {
+  width: 200px;
+  height: 170px;
+}
+#form1 {
+  width: 80px;
+}
+.anh-nho {
+  width: 200px;
+}
+.thanhtoan {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.btn-dark1 {
+  color: #fff;
+  background-color: #5cc639;
+  border-color: #343a40;
+}
+.tongtien-font {
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 650px;
+}
+.gioithieu {
+  text-align: center;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.x {
+  text-align: center;
+  margin-top: 7px;
+}
+.anh-anh {
+  text-align: center;
+}
+.chinhanh {
+  height: 500px;
+}
+.gioithieu-text {
+  width: 900px;
+  text-align: center;
+  margin-left: 100px;
+}
+.rr {
+  background-color: #f46164;
+  border: 1px solid white;
+  height: 100px;
+  width: 250px;
+  color: white;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.db{
+  width: 170px;
+  height: 50px;
+  background-color: rgb(53, 51, 51);
+  border: 1px solid white;
+  
+}
+.dl{
+  color: white;
+}
+.anhmess img{
+  width: 70px;
+  height: 70px;
+}
+.loai{
+  width: 100%;
+  height: 40px;
+}
+.kichco{
+  margin-right: 10px;
+}
+.boxx{
+ 
+  width: 100px;
+}
+.do{
+  color: red;
+}
+

@@ -1,0 +1,91 @@
+<br>  
+<br>
+<h2 class="text">  Sản Phẩm</h2><br><br>
+<div class="row">
+  <div class="col-md-2">
+    <div class="col-md-6 category" data-mdb-filter="color">
+      <h3 class="">Category </h3>
+      <div class="form-check mt-3 category-text">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Áo Polo"
+          checked />
+        <label class="category-text" for="inlineRadio1">Tất Cả</label>
+      </div>
+      <div class="form-check category-text">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="red" />
+        <label class="category-text" for="inlineRadio2">Shirts</label>
+      </div>
+      <div class="form-check category-text">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="red" />
+        <label class="category-text" for="inlineRadio2">Hoodie</label>
+      </div>
+
+      <div class="form-check category-text">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="gray" />
+        <label class="category-text" for="inlineRadio4">Shorts</label>
+      </div>
+      <div class="form-check category-text">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="gray" />
+        <label class="category-text" for="inlineRadio4">Sport shoes</label>
+      </div>
+      <div class="form-check category-text">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="blue" />
+        <label class="category-text" for="inlineRadio3">T-Shirts</label>
+      </div>
+      <div class="form-check category-text">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="blue" />
+        <label class="category-text" for="inlineRadio3">Pants</label>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-10">
+
+    <!-- <div class="row">
+      <div class="col-md-3 col-6 category-sanpham"  ng-repeat="sp in listSP">
+        <div class="thumbnail">
+          <div class="box">
+            <a href="#chitiet/{{sp.id}}">
+              <img class="anh" src="{{sp.anh}}" style="width:100%">
+          </div>
+          <div class="caption">
+            <h5 class="o">{{sp.ten}}</h5>
+          </div>
+          </a>
+          <p class="a">{{sp.dacdiem}}</p>
+          <p class="q">${{sp.gia}}</p>
+          <div class="u">
+            <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br><br> -->
+    <div class="row" >
+      <div class="col-md-3 col-6 category-sanpham" ng-repeat="sp in listSP">
+        <div class="thumbnail">
+          <div class="box">
+            <a href="#chitiet/{{sp.id}}">
+              <img class="anh" src="{{sp.anh}}" style="width:100%">
+          </div>
+          <div class="caption">
+            <h5 class="o">{{sp.ten}}</h5>
+          </div>
+          </a>
+          <p class="a">{{sp.dacdiem}}</p>
+          <div class="f">
+            <p class="q">${{sp.gia}}</p>
+            <p class="gach k">${{sp.giagoc}}</p>
+          </div>
+          <p class="cach">{{sp.giamgia}}</p>
+          <div class="u">
+            <button class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i> Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<br><br>

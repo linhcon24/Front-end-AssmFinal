@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/999051c9de.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <!-- <script type="text/javascript" src="http://webquangnam.com/jsShare/hoa-mai-roi.js"></script> -->
+
+    <title>Assignment Final</title>
+
+</head>
+
+<body ng-app="myapp">
+
+    <nav ng-include="'header.html'"></nav>
+    <div ng-view></div>
+    <nav ng-include="'footer.html'"></nav>
+
+    <script>
+        var app = angular.module("myapp", ["ngRoute"]);
+        app.config(function ($routeProvider, $locationProvider) {
+            $locationProvider.hashPrefix("");
+            $routeProvider
+                .when("/trangchu", {
+                    templateUrl: "trangchu.html",
+                    controller: Products
+                })
+                .when("/gioithieu", {
+                    templateUrl: "gioithieu.html",
+                })
+                .when("/sanpham", {
+                    templateUrl: "sanpham.html",
+                    controller: Products
+                })
+                .when("/chitiet/:id", {
+                    templateUrl: "chitiet.html",
+                    controller: Products
+                })
+                .when("/themvaogio", {
+                    templateUrl: "themvaogio.html",
+                })
+                .when("/forgot", {
+                    templateUrl: "forgot.html",
+                })
+                .when("/login", {
+                    templateUrl: "login.html",
+                })
+                .when("/adm", {
+                    templateUrl: "adm/index2.html",
+                    controller: Products
+                })
+                .when("/create", {
+                    templateUrl: "adm/create.html",
+                    controller: Products
+                })
+                .when("/update/:id", {
+                    templateUrl: "adm/update.html",
+                })
+                .otherwise({
+                    redirectTo: "/trangchu",
+                });
+        });
+    </script>
+    
+    <script src="products.js"></script>
+</body>
+</html>
